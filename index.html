@@ -18,52 +18,210 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://yeuvk2206-netizen.github.io/drawlove-website./#website","url":"https://yeuvk2206-netizen.github.io/drawlove-website./","name":"DrawLove","alternateName":"DrawLove Shop","inLanguage":"vi","publisher":{"@id":"https://yeuvk2206-netizen.github.io/drawlove-website./#shop"}},{"@type":"Organization","@id":"https://yeuvk2206-netizen.github.io/drawlove-website./#shop","name":"DrawLove","url":"https://yeuvk2206-netizen.github.io/drawlove-website./","sameAs":["https://www.instagram.com/drawlove.shop.226/"]}]}
   </script>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
+  <!-- Canvas hạt trái tim bay lơ lửng & vệt chuột thần tiên -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
   <a class="skip" href="#catalog">Đến danh mục</a>
+  
   <header class="header wrap">
-    <a class="brand" href="#" aria-label="DrawLove — trang chủ"><span class="brand-mark" aria-hidden="true">♡</span>DrawLove<span class="brand-dot">.</span></a>
-    <nav aria-label="Điều hướng chính"><a href="#catalog">Danh mục</a><a href="#how">Cách chọn gói</a><a class="nav-instagram" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav>
+    <a class="brand" href="#" aria-label="DrawLove — trang chủ">
+      <span class="brand-mark" aria-hidden="true">♡</span>
+      DrawLove<span class="brand-dot">.</span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#catalog">Danh mục</a>
+      <a href="#how">Cách chọn gói</a>
+      <a class="nav-instagram" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    </nav>
   </header>
+
   <main>
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> LITTLE UPGRADES, LOVELY DAYS</p>
-        <h1 id="hero-title">Một chút tiện ích.<br>Nhiều chút <em>yêu.</em></h1>
+        <p class="eyebrow"><span class="pulse-dot"></span> LITTLE UPGRADES, LOVELY DAYS</p>
+        <h1 id="hero-title" class="shimmer-title">Một chút tiện ích.<br>Nhiều chút <em>yêu.</em></h1>
         <p class="lead">DrawLove Shop — Locket Gold, CapCut, ChatGPT,<br>Meitu, Wink và Gemini. Chọn gói và inbox để được tư vấn.</p>
-        <div class="hero-actions"><a class="button" href="#catalog">Khám phá danh mục <span aria-hidden="true">↓</span></a><a class="text-link" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">Xem Instagram ↗</a></div>
-        <p class="instagram-note"><span aria-hidden="true">♡</span> Xem bảng giá tại tin nổi bật trên Instagram</p>
+        <div class="hero-actions">
+          <a class="button button-glow" href="#catalog">
+            <span>Khám phá danh mục</span>
+            <span class="btn-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="text-link" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">Xem Instagram ↗</a>
+        </div>
+        <p class="instagram-note"><span class="beating-heart" aria-hidden="true">♡</span> Xem bảng giá tại tin nổi bật trên Instagram</p>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <span class="spark spark-one">✧</span><span class="spark spark-two">✧</span><span class="tiny-heart">♡</span>
+      
+      <div class="hero-art" aria-hidden="true" id="hero-art-box">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="spark spark-one">✧</span>
+        <span class="spark spark-two">✧</span>
+        <span class="tiny-heart">♡</span>
         <div class="floating-tag tag-top">a little love, every day ♡</div>
-        <div class="love-card"><div class="card-top"><span>DRAWLOVE</span><span>✧</span></div><div class="heart-shape">♥</div><p>Made for your<br><em>lovely little moments.</em></p><div class="card-bottom"><span>YOUR DAILY UPGRADE</span><span>♡</span></div></div>
-        <div class="floating-tag tag-bottom"><span class="tag-icon">✦</span><div>Ứng dụng bạn yêu thích<small>Khám phá cùng DrawLove</small></div></div>
+        <div class="love-card" id="love-card">
+          <div class="card-glow"></div>
+          <div class="card-top">
+            <span>DRAWLOVE</span>
+            <span>✧</span>
+          </div>
+          <div class="heart-shape">♥</div>
+          <p>Made for your<br><em>lovely little moments.</em></p>
+          <div class="card-bottom">
+            <span>YOUR DAILY UPGRADE</span>
+            <span>♡</span>
+          </div>
+        </div>
+        <div class="floating-tag tag-bottom">
+          <span class="tag-icon">✦</span>
+          <div>Ứng dụng bạn yêu thích<small>Khám phá cùng DrawLove</small></div>
+        </div>
       </div>
     </section>
-    <div class="ribbon"><div class="wrap"><span>CHỌN GÓI BẠN THÍCH</span><b>✧</b><span>INBOX INSTAGRAM</span><b>✧</b><span>KẾT NỐI VỚI DRAWLOVE</span><b>✧</b><span>A LITTLE MORE LOVE</span></div></div>
-    <section class="catalog wrap" id="catalog" aria-labelledby="catalog-title">
-      <div class="section-heading"><div><p class="eyebrow">THE LOVELY COLLECTION</p><h2 id="catalog-title">Bạn đang tìm <em>điều gì?</em></h2></div><p>Những ứng dụng quen thuộc.<br>Một nơi để khám phá và chọn gói.</p></div>
-      <div class="categories" aria-label="Danh mục sản phẩm">
-        <button class="category active" data-category="Locket Gold" aria-pressed="true"><span class="app-icon locket" aria-hidden="true">♥</span><span>Locket Gold</span><small>Lưu những khoảnh khắc</small></button>
-        <button class="category" data-category="CapCut" aria-pressed="false"><span class="app-icon capcut" aria-hidden="true">✂</span><span>CapCut</span><small>Kể chuyện bằng video</small></button>
-        <button class="category" data-category="ChatGPT" aria-pressed="false"><span class="app-icon chatgpt" aria-hidden="true">✺</span><span>ChatGPT</span><small>Khơi mở ý tưởng</small></button>
-        <button class="category" data-category="Meitu" aria-pressed="false"><span class="app-icon meitu" aria-hidden="true">M</span><span>Meitu</span><small>Cảm hứng hình ảnh</small></button>
-        <button class="category" data-category="Wink" aria-pressed="false"><span class="app-icon wink" aria-hidden="true">w.</span><span>Wink</span><small>Chút sáng tạo mỗi ngày</small></button>
-        <button class="category" data-category="Gemini" aria-pressed="false"><span class="app-icon gemini" aria-hidden="true">✦</span><span>Gemini</span><small>Khám phá điều mới</small></button>
+
+    <!-- Infinite Seamless Marquee Ribbon (Chạy liên tục) -->
+    <div class="ribbon" aria-label="Thông điệp DrawLove">
+      <div class="ribbon-track">
+        <div class="ribbon-group">
+          <span>CHỌN GÓI BẠN THÍCH</span><b>✧</b><span>INBOX INSTAGRAM</span><b>✧</b><span>KẾT NỐI VỚI DRAWLOVE</span><b>✧</b><span>A LITTLE MORE LOVE</span><b>✧</b>
+        </div>
+        <div class="ribbon-group" aria-hidden="true">
+          <span>CHỌN GÓI BẠN THÍCH</span><b>✧</b><span>INBOX INSTAGRAM</span><b>✧</b><span>KẾT NỐI VỚI DRAWLOVE</span><b>✧</b><span>A LITTLE MORE LOVE</span><b>✧</b>
+        </div>
+        <div class="ribbon-group" aria-hidden="true">
+          <span>CHỌN GÓI BẠN THÍCH</span><b>✧</b><span>INBOX INSTAGRAM</span><b>✧</b><span>KẾT NỐI VỚI DRAWLOVE</span><b>✧</b><span>A LITTLE MORE LOVE</span><b>✧</b>
+        </div>
       </div>
-      <div class="collection-heading"><h3 id="collection-title">Locket Gold</h3><span id="collection-status">Thông tin gói đang được cập nhật</span></div>
+    </div>
+
+    <section class="catalog wrap" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE LOVELY COLLECTION</p>
+          <h2 id="catalog-title">Bạn đang tìm <em>điều gì?</em></h2>
+        </div>
+        <p>Những ứng dụng quen thuộc.<br>Một nơi để khám phá và chọn gói.</p>
+      </div>
+
+      <div class="categories" aria-label="Danh mục sản phẩm">
+        <button class="category active" data-category="Locket Gold" aria-pressed="true">
+          <span class="app-icon locket" aria-hidden="true">♥</span>
+          <span>Locket Gold</span>
+          <small>Lưu những khoảnh khắc</small>
+        </button>
+        <button class="category" data-category="CapCut" aria-pressed="false">
+          <span class="app-icon capcut" aria-hidden="true">✂</span>
+          <span>CapCut</span>
+          <small>Kể chuyện bằng video</small>
+        </button>
+        <button class="category" data-category="ChatGPT" aria-pressed="false">
+          <span class="app-icon chatgpt" aria-hidden="true">✺</span>
+          <span>ChatGPT</span>
+          <small>Khơi mở ý tưởng</small>
+        </button>
+        <button class="category" data-category="Meitu" aria-pressed="false">
+          <span class="app-icon meitu" aria-hidden="true">M</span>
+          <span>Meitu</span>
+          <small>Cảm hứng hình ảnh</small>
+        </button>
+        <button class="category" data-category="Wink" aria-pressed="false">
+          <span class="app-icon wink" aria-hidden="true">w.</span>
+          <span>Wink</span>
+          <small>Chút sáng tạo mỗi ngày</small>
+        </button>
+        <button class="category" data-category="Gemini" aria-pressed="false">
+          <span class="app-icon gemini" aria-hidden="true">✦</span>
+          <span>Gemini</span>
+          <small>Khám phá điều mới</small>
+        </button>
+      </div>
+
+      <div class="collection-heading">
+        <h3 id="collection-title">Locket Gold</h3>
+        <span id="collection-status">Thông tin gói đang được cập nhật</span>
+      </div>
+
       <div id="products" class="products" aria-live="polite"></div>
-      <div class="empty-state" id="empty-state"><span class="empty-icon" aria-hidden="true">♡</span><h4>Một chút chờ đợi, nhiều điều đáng yêu</h4><p id="empty-copy">Thông tin các gói Locket Gold đang được cập nhật.<br>Inbox DrawLove để được tư vấn về gói bạn quan tâm.</p><a class="button button-light" href="https://ig.me/m/drawlove.shop.226" target="_blank" rel="noopener noreferrer">Inbox DrawLove <span aria-hidden="true">↗</span></a></div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">♡</span>
+        <h4>Một chút chờ đợi, nhiều điều đáng yêu</h4>
+        <p id="empty-copy">Thông tin các gói Locket Gold đang được cập nhật.<br>Inbox DrawLove để được tư vấn về gói bạn quan tâm.</p>
+        <a class="button button-light" href="https://ig.me/m/drawlove.shop.226" target="_blank" rel="noopener noreferrer">
+          Inbox DrawLove <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
       <p class="catalog-note">Xem bảng giá tại tin nổi bật trên Instagram · <a href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">@drawlove.shop.226 ↗</a></p>
     </section>
-    <section class="how wrap" id="how" aria-labelledby="how-title"><div><p class="eyebrow">SIMPLE & LOVELY</p><h2 id="how-title">Chọn gói thật <em>dễ.</em></h2></div><div class="steps"><article><span>01</span><h3>Khám phá</h3><p>Xem danh mục và thông tin các gói ứng dụng.</p></article><article><span>02</span><h3>Chọn gói</h3><p>Nhấn “Chọn gói” để mở inbox Instagram của shop.</p></article><article><span>03</span><h3>Nhắn DrawLove</h3><p>Gửi tên gói bạn quan tâm để được tư vấn đặt mua.</p></article></div></section>
-    <section class="contact wrap"><div><p class="eyebrow">LET'S CONNECT</p><h2>Một lời nhắn.<br><em>Một chút yêu thương.</em></h2><p>DrawLove ở ngay đây, trên Instagram của bạn.</p></div><a class="button" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">Xem Instagram <span aria-hidden="true">↗</span></a></section>
+
+    <section class="how wrap" id="how" aria-labelledby="how-title">
+      <div>
+        <p class="eyebrow">SIMPLE & LOVELY</p>
+        <h2 id="how-title">Chọn gói thật <em>dễ.</em></h2>
+      </div>
+      <div class="steps">
+        <article class="step-card">
+          <span>01</span>
+          <h3>Khám phá</h3>
+          <p>Xem danh mục và thông tin các gói ứng dụng.</p>
+        </article>
+        <article class="step-card">
+          <span>02</span>
+          <h3>Chọn gói</h3>
+          <p>Nhấn “Chọn gói” để mở inbox Instagram của shop.</p>
+        </article>
+        <article class="step-card">
+          <span>03</span>
+          <h3>Nhắn DrawLove</h3>
+          <p>Gửi tên gói bạn quan tâm để được tư vấn đặt mua.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact wrap">
+      <div class="contact-copy">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Một lời nhắn.<br><em>Một chút yêu thương.</em></h2>
+        <p>DrawLove ở ngay đây, trên Instagram của bạn.</p>
+      </div>
+      <a class="button button-glow" href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">
+        Xem Instagram <span class="btn-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
   </main>
-  <footer class="footer wrap"><a class="brand" href="#">DrawLove<span class="brand-dot">.</span></a><p>Made with a little love ♡</p><a href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">@drawlove.shop.226 ↗</a></footer>
-  <noscript><p class="wrap">Bật JavaScript để xem sản phẩm theo danh mục. Bạn vẫn có thể <a href="https://ig.me/m/drawlove.shop.226">inbox DrawLove trên Instagram</a>.</p></noscript>
+
+  <footer class="footer wrap">
+    <a class="brand" href="#">
+      DrawLove<span class="brand-dot">.</span>
+    </a>
+    <p>Made with a little love ♡</p>
+    <a href="https://www.instagram.com/drawlove.shop.226/" target="_blank" rel="noopener noreferrer">@drawlove.shop.226 ↗</a>
+  </footer>
+
+  <!-- Nút Thả Tim Nhanh & Nhắn Instagram -->
+  <aside class="fab-container" aria-label="Hỗ trợ nhanh">
+    <button class="fab-burst-btn" id="fab-burst-btn" type="button" title="Bấm để thả tim lung linh!">
+      <span class="fab-burst-icon">✨</span>
+      <span>Thả tim ♡</span>
+    </button>
+    <a class="fab-chat" href="https://ig.me/m/drawlove.shop.226" target="_blank" rel="noopener noreferrer" title="Nhắn tin Instagram cho DrawLove">
+      <span class="fab-icon" aria-hidden="true">♡</span>
+      <span class="fab-text">Nhắn Shop</span>
+      <span class="fab-badge">Online</span>
+    </a>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="wrap">Bật JavaScript để xem sản phẩm theo danh mục. Bạn vẫn có thể <a href="https://ig.me/m/drawlove.shop.226">inbox DrawLove trên Instagram</a>.</p>
+  </noscript>
 </body>
 </html>
