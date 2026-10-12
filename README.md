@@ -1,5 +1,15 @@
 # drawlove-website.
 
+## Google Search
+
+Website: https://yeuvk2206-netizen.github.io/drawlove-website./
+
+Sitemap: https://yeuvk2206-netizen.github.io/drawlove-website./sitemap.xml
+
+Đã thêm tiêu đề, mô tả, canonical, Open Graph và dữ liệu có cấu trúc WebSite/Organization. Không thêm giá hoặc đánh giá giả. Trong Google Search Console, thêm thuộc tính URL-prefix với đúng URL website, xác minh bằng thẻ HTML, gửi sitemap.xml và dùng URL Inspection để yêu cầu lập chỉ mục trang chủ. Giữ nguyên thẻ xác minh khi cập nhật website.
+
+robots.txt chỉ có hiệu lực tại gốc hostname; file trong /drawlove-website./ không điều khiển Googlebot. Vì dự án là GitHub Pages dưới thư mục repository, không thêm robots.txt tại thư mục này. Google quyết định việc lập chỉ mục và thứ hạng; SEO và sitemap không đảm bảo kết quả tức thì.
+
 Website giới thiệu DrawLove, chạy tĩnh trên GitHub Pages, không cần backend.
 
 ## Nội dung
