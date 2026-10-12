@@ -1,0 +1,19 @@
+{
+  "Locket Gold": [
+    {"name":"Locket Gold Demo 3s","image":"locket.svg","description":"Gói Locket Gold Demo với video 3 giây, sử dụng trong 1 tháng.","videoDuration":"3 giây","validity":"1 tháng","features":["Add nhiều bạn bè"]},
+    {"name":"Locket Gold Demo 30s","image":"locket.svg","description":"Gói Locket Gold Demo với video 30 giây, sử dụng trong 1 tháng.","videoDuration":"30 giây","validity":"1 tháng","features":["Add nhiều bạn bè"]},
+    {"name":"Locket Gold V1","image":"locket.svg","description":"Gói Locket Gold V1 với video 3 giây, sử dụng trong 1 năm.","videoDuration":"3 giây","validity":"1 năm","features":["Add nhiều bạn bè"]},
+    {"name":"Locket Gold V2","image":"locket.svg","description":"Gói Locket Gold V2 với video 30 giây, sử dụng trong 1 năm.","videoDuration":"30 giây","validity":"1 năm","features":["Add nhiều bạn bè"]},
+    {"name":"Locket Gold V3","image":"locket.svg","description":"Gói Locket Gold V3 với video 30 giây và bảo hành 1 năm.","videoDuration":"30 giây","validity":"Vĩnh viễn","warranty":"1 năm","features":["Add nhiều bạn bè"]},
+    {"name":"Locket Gold V4","image":"locket.svg","description":"Gói Locket Gold V4 với video 3 giây và bảo hành 1 năm.","videoDuration":"3 giây","validity":"Vĩnh viễn","warranty":"1 năm","features":["Add nhiều bạn bè"]}
+  ],
+  "CapCut": [
+    {"name":"CapCut Pro 1 tháng","image":"capcut.svg","description":"Gói CapCut Pro sử dụng trong 1 tháng trên 2 thiết bị.","validity":"1 tháng","features":["2 thiết bị"]},
+    {"name":"CapCut Pro 6 tháng","image":"capcut.svg","description":"Gói CapCut Pro sử dụng trong 6 tháng trên 2 thiết bị.","validity":"6 tháng","features":["2 thiết bị"]}
+  ],
+  "ChatGPT": [{"name":"GPT nâng chính chủ","image":"chatgpt.svg","description":"Gói GPT nâng chính chủ, sử dụng trong 1 tháng.","validity":"1 tháng","features":["Nâng chính chủ"]}],
+  "Meitu": [{"name":"Meitu 1 tháng","image":"meitu.svg","description":"Gói Meitu sử dụng trong 1 tháng trên 1 thiết bị.","validity":"1 tháng","features":["1 thiết bị"]}],
+  "Wink": [{"name":"Wink 1 tháng","image":"wink.svg","description":"Gói Wink sử dụng trong 1 tháng trên 1 thiết bị.","validity":"1 tháng","features":["1 thiết bị"]}],
+  "Gemini": [{"name":"Gemini Pro nâng chính chủ","image":"gemini.svg","description":"Gói Gemini Pro nâng chính chủ, sử dụng trong 1 tháng.","validity":"1 tháng","features":["Nâng chính chủ"]}]
+}
+
