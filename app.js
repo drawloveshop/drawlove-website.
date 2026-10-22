@@ -1,5 +1,51 @@
 'use strict';
 
+// A short, quiet tone generated locally after a user click; no audio download.
+(() => {
+  let audioContext;
+  let lastClick = -Infinity;
+
+  function playClick() {
+    const now = audioContext.currentTime;
+    if (now - lastClick < 0.06) return;
+    lastClick = now;
+
+    const tone = audioContext.createOscillator();
+    const volume = audioContext.createGain();
+    tone.type = 'sine';
+    tone.frequency.setValueAtTime(740, now);
+    tone.frequency.exponentialRampToValueAtTime(520, now + 0.085);
+    volume.gain.setValueAtTime(0, now);
+    volume.gain.linearRampToValueAtTime(0.025, now + 0.006);
+    volume.gain.exponentialRampToValueAtTime(0.0001, now + 0.08);
+    volume.gain.linearRampToValueAtTime(0, now + 0.09);
+    tone.connect(volume);
+    volume.connect(audioContext.destination);
+    tone.onended = () => {
+      tone.disconnect();
+      volume.disconnect();
+    };
+    tone.start(now);
+    tone.stop(now + 0.09);
+  }
+
+  document.addEventListener('click', (event) => {
+    if (!event.isTrusted || event.button !== 0) return;
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
+    try {
+      if (!audioContext) audioContext = new AudioContext();
+      if (audioContext.state === 'suspended') {
+        audioContext.resume().then(playClick).catch(() => {});
+      } else if (audioContext.state === 'running') {
+        playClick();
+      }
+    } catch (_) {
+      // Audio restrictions must never interrupt navigation or product selection.
+    }
+  }, { passive: true });
+})();
+
 const INSTAGRAM_INBOX = 'https://ig.me/m/drawlove.shop.226';
 const categoryNames = ['Locket Gold', 'CapCut', 'ChatGPT', 'Meitu', 'Wink', 'Gemini', 'Netflix', 'YouTube Premium', 'Spotify iOS'];
 let catalog = Object.fromEntries(categoryNames.map(name => [name, []]));
