@@ -14,6 +14,24 @@
   "ChatGPT": [{"name":"GPT nâng chính chủ","image":"chatgpt.svg","description":"Gói GPT nâng chính chủ, sử dụng trong 1 tháng.","validity":"1 tháng","features":["Nâng chính chủ"]}],
   "Meitu": [{"name":"Meitu 1 tháng","image":"meitu.svg","description":"Gói Meitu sử dụng trong 1 tháng trên 1 thiết bị.","validity":"1 tháng","features":["1 thiết bị"]}],
   "Wink": [{"name":"Wink 1 tháng","image":"wink.svg","description":"Gói Wink sử dụng trong 1 tháng trên 1 thiết bị.","validity":"1 tháng","features":["1 thiết bị"]}],
-  "Gemini": [{"name":"Gemini Pro nâng chính chủ","image":"gemini.svg","description":"Gói Gemini Pro nâng chính chủ, sử dụng trong 1 tháng.","validity":"1 tháng","features":["Nâng chính chủ"]}]
+  "Gemini": [{"name":"Gemini Pro nâng chính chủ","image":"gemini.svg","description":"Gói Gemini Pro nâng chính chủ, sử dụng trong 1 tháng.","validity":"1 tháng","features":["Nâng chính chủ"]}],
+  "Netflix": [
+    {"name":"Netflix — 1 tháng","image":"netflix.svg","description":"Gói Netflix với thời hạn 1 tháng.","validity":"1 tháng","features":[]},
+    {"name":"Netflix — 3 tháng","image":"netflix.svg","description":"Gói Netflix với thời hạn 3 tháng.","validity":"3 tháng","features":[]},
+    {"name":"Netflix — 6 tháng","image":"netflix.svg","description":"Gói Netflix với thời hạn 6 tháng.","validity":"6 tháng","features":[]},
+    {"name":"Netflix — 1 năm","image":"netflix.svg","description":"Gói Netflix với thời hạn 1 năm.","validity":"1 năm","features":[]}
+  ],
+  "YouTube Premium": [
+    {"name":"YouTube Premium — 1 tháng","image":"youtube.svg","description":"Gói YouTube Premium với thời hạn 1 tháng.","validity":"1 tháng","features":[]},
+    {"name":"YouTube Premium — 3 tháng","image":"youtube.svg","description":"Gói YouTube Premium với thời hạn 3 tháng.","validity":"3 tháng","features":[]},
+    {"name":"YouTube Premium — 6 tháng","image":"youtube.svg","description":"Gói YouTube Premium với thời hạn 6 tháng.","validity":"6 tháng","features":[]},
+    {"name":"YouTube Premium — 1 năm","image":"youtube.svg","description":"Gói YouTube Premium với thời hạn 1 năm.","validity":"1 năm","features":[]}
+  ],
+  "Spotify iOS": [
+    {"name":"Spotify iOS — 1 tháng","image":"spotify.svg","description":"Gói Spotify iOS với thời hạn 1 tháng.","validity":"1 tháng","features":[]},
+    {"name":"Spotify iOS — 3 tháng","image":"spotify.svg","description":"Gói Spotify iOS với thời hạn 3 tháng.","validity":"3 tháng","features":[]},
+    {"name":"Spotify iOS — 6 tháng","image":"spotify.svg","description":"Gói Spotify iOS với thời hạn 6 tháng.","validity":"6 tháng","features":[]},
+    {"name":"Spotify iOS — 1 năm","image":"spotify.svg","description":"Gói Spotify iOS với thời hạn 1 năm.","validity":"1 năm","features":[]}
+  ]
 }
 
