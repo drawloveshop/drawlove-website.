@@ -1,7 +1,7 @@
 'use strict';
 
 const INSTAGRAM_INBOX = 'https://ig.me/m/drawlove.shop.226';
-const categoryNames = ['Locket Gold', 'CapCut', 'ChatGPT', 'Meitu', 'Wink', 'Gemini'];
+const categoryNames = ['Locket Gold', 'CapCut', 'ChatGPT', 'Meitu', 'Wink', 'Gemini', 'Netflix', 'YouTube Premium', 'Spotify iOS'];
 let catalog = Object.fromEntries(categoryNames.map(name => [name, []]));
 let selectedCategory = 'Locket Gold';
 let loadFailed = false;

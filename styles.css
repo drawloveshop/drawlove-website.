@@ -839,6 +839,21 @@ h2 {
   color: #8c78d0;
 }
 
+.netflix {
+  background: #fce3e8;
+  color: #c7354b;
+}
+
+.youtube {
+  background: #ffeaed;
+  color: #d84458;
+}
+
+.spotify {
+  background: #e1f3e8;
+  color: #32855e;
+}
+
 .collection-heading {
   display: flex;
   align-items: center;
